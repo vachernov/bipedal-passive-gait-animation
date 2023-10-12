@@ -30,7 +30,7 @@ $$
     M(\theta) \ddot \theta + N(\theta, \dot \theta) \dot \theta + \frac{1}{a} g(\dot \theta) = 0
 $$
 
-where $ \mu = \frac{m_H}{m}, \beta = \frac{b}{a}$ – normalazed peremeters and 
+where $` \mu = \frac{m_H}{m}, \beta = \frac{b}{a} `$ – normalazed peremeters and 
 
 $$
     M(\theta) =
@@ -57,10 +57,11 @@ $$
 $$
 
 $$
-   - M(\theta) \ddot \theta =  N(\theta, \dot \theta) \dot \theta + \frac{1}{a} g(\dot \theta)
+   -M(\theta) \ddot \theta =  N(\theta, \dot \theta) \dot \theta + \frac{1}{a} g(\dot \theta)
+   
 $$
 
-Since $ \mu \in [0.1; 10] $ and $ \beta \in [0.1; 10] $, $ M(\theta)^{-1} $ exists, so
+Since $` \mu \in [0.1; 10] $ and $ \beta \in [0.1; 10] $, $ M(\theta)^{-1} `$ exists, so
 
 $$
      \ddot \theta = - M(\theta)^{-1} ( N(\theta, \dot \theta) \dot \theta + \frac{1}{a} g(\dot \theta) )
@@ -78,7 +79,7 @@ $$
 
 Now we can use solvers to integrate equivalent first-oder differential equation `q_dot = f(q, t)`
 
-Ground impact of the swing leg with the ground is assumed to be slipless plastic. The pre-impact and the post-impact configurations of the robot can be simply related by permutation of $ \theta $ components. The post-impact joint velocity of the biped can be computed via the conservation of angular momentum principle.
+Ground impact of the swing leg with the ground is assumed to be slipless plastic. The pre-impact and the post-impact configurations of the robot can be simply related by permutation of $` \theta `$ components. The post-impact joint velocity of the biped can be computed via the conservation of angular momentum principle.
 
 $$
     W(\alpha) =
