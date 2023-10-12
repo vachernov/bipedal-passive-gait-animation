@@ -20,12 +20,14 @@ $$
 $$
 
 State-space: 
+
 $$
     q = [ \theta, \ \dot \theta ]^T = [ \theta_{ns}, \theta_{s}, \ \dot \theta_{ns}, \dot \theta_{s} ]^T
 
 $$
 
-The swing stage equations of the robot similar to that of a frictionless double pendulum  can be written as:
+The swing stage equations of the robot similar to that of a frictionless double pendulum can be written as:
+
 $$
     M(\theta) \ddot \theta + N(\theta, \dot \theta) \dot \theta + \frac{1}{a} g(\dot \theta) = 0
 $$
@@ -107,7 +109,9 @@ $$
         -\beta & -\beta + ( \mu(1 + \beta)^2 + 2(1 + \beta) ) \cos 2 \alpha \\
         0 & -\beta
     \end{pmatrix}
-    , \quad
+$$
+
+$$
     Q^{+}(\alpha) =
     \begin{pmatrix}
         \beta( \beta - (1 + \beta) \cos 2 \alpha ) & (1 + \beta)( (1 + \beta) - \beta \cos 2 \alpha ) + 1 + \mu(1 + \beta)^2
@@ -134,7 +138,7 @@ The drawing has to be fixed, but represent main idea.
 
 ## Programm realization
 
-The numerical simulation is based on `scipy` python package. Relative tolerance of the solver **RK45** is set to $1e-5$, absolute tolerance is set to $1e-7$. At each point os time switching condition is checked. If legs has to be switched, we restart solver with new state vector $` W(q_{[k]})q_{[k]} `$.
+The numerical simulation is based on `scipy` python package. Relative tolerance of the solver **RK45** is set to $1e-5$, absolute tolerance is set to $1e-7$. At each point os time switching condition is checked. If legs has to be switched, we restart solver with new state vector $` q_{[k+1]} = W(q_{[k]})q_{[k]} `$.
 
 ## Sources
 1. Goswami A., Thuilot B., Espiau B. A study of the passive gait of a compass-like biped robot: Symmetry and chaos //The International Journal of Robotics Research. – 1998. – Т. 17. – №. 12. – С. 1282-1301.
